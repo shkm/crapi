@@ -101,7 +101,7 @@ def path_to_lookup_keys(path : String)
 end
 
 
-def serve(data)
+def serve(data : AnyDataType, options : Options)
   server = HTTP::Server.new do |context|
     keys = path_to_lookup_keys(context.request.path)
     value = dig_data?(data, keys)
@@ -125,7 +125,7 @@ def main
   options = Options.parse
   data = parse_file(options.file_path)
 
-  serve(data)
+  serve(data, options)
 end
 
 main
