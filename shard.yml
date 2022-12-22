@@ -1,0 +1,13 @@
+name: crapi
+version: 0.1.0
+
+authors:
+  - Jamie Schembri <jamie@schembri.me>
+
+targets:
+  crapi:
+    main: src/crapi.cr
+
+crystal: "~> 1.6"
+
+license: MIT
